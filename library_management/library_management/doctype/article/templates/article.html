@@ -1,0 +1,22 @@
+{% raw %}
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container">
+    <h1>{{ title }}</h1>
+    <p>By {{ author }}</p>
+    <p>Status: 
+        {% if status == 'Available' %}
+            Available
+        {% elif status == 'Issued' %}
+            Issued
+        {% endif %}
+    </p>
+    <p>Publisher: {{ publisher }}</p>
+    <p>ISBN: {{ isbn }}</p>
+    <p>{{ description }}</p>
+</div>
+{% endblock %}
+{% endraw %}
+
+<!-- this is a sample default web page template -->
